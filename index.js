@@ -19,7 +19,7 @@ var cacheControl = function cacheControl(req, res,
     next) {
 
   // Support old browsers
-  res.setHeader('Expires', 0);
+  res.setHeader('Expires', 'Fri, 01 Jan 1990 00:00:00 GMT');
 
   // Support recent browsers
   res.setHeader('Cache-Control', 'no-store, ' +
@@ -33,3 +33,4 @@ var cacheControl = function cacheControl(req, res,
 };
 
 module.exports = cacheControl;
+
